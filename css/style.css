@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    position: relative;
+}
+.wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.box{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+.box:hover{
+    cursor: pointer;
+}
+.one, .two, .three{
+    border-top: none;
+}
+.one, .four, .seven{
+    border-left: none;
+}
+.three, .six, .nine{
+    border-right: none;
+}
+.seven, .eight, .nine{
+    border-bottom: none;
+}
+.result-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.result{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+.text{
+    padding: 1.1rem 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+.restart-btn{
+    font-size: 18px;
+    color: #fff;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    cursor: pointer;
+}
